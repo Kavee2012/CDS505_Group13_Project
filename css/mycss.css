@@ -41,6 +41,10 @@ blockquote {
   padding-bottom: 40px;
 }
 
+section {
+  background-color: #000;
+}
+
 .tm-content-box {
   padding-top: 20px;
   padding-bottom: 40px;
@@ -315,9 +319,9 @@ blockquote {
 /* Work */
 
 .tm-section-desc {
-  max-width: 650px;
+  max-width: 950px;
   width: 100%;
-  font-size: 1.1rem;
+  font-size: 18px;
 }
 
 .tm-gallery-container {
@@ -498,7 +502,6 @@ figure.effect-honey:hover h2 i {
 	}
 
 /* recommend */
-
 #recommend {
   color: white;
   background-color: #001828;
@@ -700,7 +703,6 @@ p {
   }
 }
 
-
 /* Recommendations Section */
 .recommendations {
   background-color: #f8f9fa;
@@ -708,8 +710,8 @@ p {
 }
 
 .recommendation-intro {
-  font-size: 1rem; /* 16px */
-  max-width: 700px;
+  font-size: 18px;
+  max-width: 950px;
   margin: 0 auto 40px auto;
   line-height: 1.6;
 }
@@ -741,7 +743,7 @@ p {
 
 /* Card titles */
 .recommendation-card h3 {
-  font-size: 1.1rem;
+  font-size: 18px;
   margin-bottom: 10px;
   color: #2c3e50;
 }
@@ -801,7 +803,7 @@ p {
 }
 
 .viz-text-card h3 {
-  font-size: 1.25rem;
+  font-size: 18px;
   margin-bottom: 15px;
   color: #2c3e50;
 }
@@ -829,11 +831,15 @@ p {
 }
 
 .viz-bg-2 {
-  background-image: url('../img/visual_2.jpg');
+  background-image: url('../img/visual_2_new.jpeg');
 }
 
 .viz-bg-3 {
   background-image: url('../img/visual_3.jpg');
+}
+
+.viz-bg-4 {
+  background-image: url('../img/visual_2.jpg');
 }
 
 /* Hover interaction (counts as subtle interactivity) */
@@ -876,9 +882,88 @@ p {
 
 .dashboard-container {
   margin: 30px auto; /* space around dashboard */
-  max-width: 1000px; /* optional max width */
-  padding: 15px;      /* inner padding around chart */
+  max-width: 1000px;
+  padding: 10px auto;      /* inner padding around chart */
   background-color: #fff; /* card-like background */
   border-radius: 10px;    /* rounded corners */
   box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+.dashboard-container {
+  overflow-x: hidden;
+}
+
+/* Call To Action Card */
+.cta-card {
+  position: relative;
+  background: rgba(84, 93, 122, 0.85);
+  width: 100%;
+  max-width: 320px;
+  margin: auto;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+/* Corner accent */
+.cta-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 40px solid #3a3f58;
+  border-right: 40px solid transparent;
+}
+
+/* Title */
+.cta-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Icon */
+.cta-card i {
+  color: #32bdeb;
+}
+
+/* Text hidden by default */
+.cta-card p {
+  font-size: 14px;
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.4s ease, max-height 0.6s ease;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Hover = reveal everything */
+.cta-card:hover p {
+  opacity: 1;
+  max-height: 500px; /* large enough for all content */
+}
+
+/* Subtle lift on hover */
+.cta-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(50, 222, 235, 0.25);
+}
+
+.member-img {
+  width: 200px;        /* adjust as needed */
+  height: 200px;
+  object-fit: cover;  /* keeps image from stretching */
+  border-radius: 50%; /* optional: circular image */
+}
+
+#gallery {
+  background-color: white;
+}
+
+#Intro {
+  background-color: white;
 }
